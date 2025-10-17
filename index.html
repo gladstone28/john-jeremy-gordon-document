@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invite a Collaborator on GitHub (Manage Access Guide)</title>
+  <meta name="description" content="Step-by-step, accessible guide for inviting a collaborator to a single GitHub repository using the Manage Access tab." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+        <span class="brand-name">GitHub Collaborator Guide</span>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-controls="siteNav" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        ☰
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Primary">
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#steps">Steps</a></li>
+          <li><a href="#permissions">Permissions</a></li>
+          <li><a href="#tips">Tips</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero / Overview -->
+    <section id="overview" class="section hero" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title">Invite a Collaborator on GitHub using <em>Manage Access</em></h1>
+        <p class="lead">
+          Share exactly one repository—keep everything else private.
+          This step-by-step guide follows GitHub’s <em>Settings → Manage access</em> flow.
+        </p>
+
+        <div class="cta-row">
+          <a class="button" href="#steps">Get Started</a>
+          <a class="button button-secondary" href="GitHub_Invite_Collaborator_Guide.pdf">Download PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section id="steps" class="section" aria-labelledby="steps-title">
+      <div class="container">
+        <h2 id="steps-title">Step-by-Step</h2>
+        <p class="section-intro">
+          Expand each step below. All components are keyboard and screen-reader friendly.
+        </p>
+
+        <ol class="steps" role="list">
+          <li class="step">
+            <details>
+              <summary><span class="step-kicker">Step 1</span> Go to your repository</summary>
+              <div class="step-content">
+                <p>Sign in at <a href="https://github.com" target="_blank" rel="noopener">github.com</a> and open the specific repository you want to share, e.g. <code>https://github.com/yourusername/your-repo-name</code>.</p>
+              </div>
+            </details>
+          </li>
+
+          <li class="step">
+            <details>
+              <summary><span class="step-kicker">Step 2</span> Open Settings → Manage access</summary>
+              <div class="step-content">
+                <p>From the repository top bar, select <strong>Settings</strong>. In the left sidebar, choose <strong>Manage access</strong>.</p>
+              </div>
+            </details>
+          </li>
+
+          <li class="step">
+            <details>
+              <summary><span class="step-kicker">Step 3</span> Invite a collaborator</summary>
+              <div class="step-content">
+                <p>Select <strong>Invite a collaborator</strong>. In the dialog, search by GitHub <em>username</em> or <em>email</em>, then click <strong>Add</strong>.</p>
+              </div>
+            </details>
+          </li>
+
+          <li class="step">
+            <details>
+              <summary><span class="step-kicker">Step 4</span> Set the right permission</summary>
+              <div class="step-content">
+                <p>After they accept, assign the minimal role required for their work. You can change it anytime.</p>
+              </div>
+            </details>
+          </li>
+
+          <li class="step">
+            <details>
+              <summary><span class="step-kicker">Step 5</span> Verify, modify, or remove access</summary>
+              <div class="step-content">
+                <p>Return to <strong>Settings → Manage access</strong> to adjust roles or remove collaborators with the <strong>⋯</strong> menu.</p>
+              </div>
+            </details>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Permissions Table -->
+    <section id="permissions" class="section" aria-labelledby="perm-title">
+      <div class="container">
+        <h2 id="perm-title">Permission Levels</h2>
+        <p class="section-intro">Start conservative. You can always increase access later.</p>
+
+        <div class="table-wrap" role="region" aria-labelledby="perm-title" tabindex="0">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">Access Level</th>
+                <th scope="col">What they can do</th>
+                <th scope="col">Best for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Read</th>
+                <td>View and clone the repository</td>
+                <td>Reviewers, readers</td>
+              </tr>
+              <tr>
+                <th scope="row">Triage</th>
+                <td>Manage issues and pull requests</td>
+                <td>QA, moderators</td>
+              </tr>
+              <tr>
+                <th scope="row">Write</th>
+                <td>Push commits, create branches</td>
+                <td>Active contributors</td>
+              </tr>
+              <tr>
+                <th scope="row">Maintain</th>
+                <td>Manage settings (not delete repo)</td>
+                <td>Project leads</td>
+              </tr>
+              <tr>
+                <th scope="row">Admin</th>
+                <td>Full control, including managing collaborators</td>
+                <td>Trusted co-owners</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <form class="role-helper" aria-labelledby="role-helper-title">
+          <h3 id="role-helper-title">Role Helper</h3>
+          <label for="taskSelect">What do you want your collaborator to do?</label>
+          <select id="taskSelect" name="taskSelect">
+            <option value="">Select a common task…</option>
+            <option value="read">Review code only</option>
+            <option value="triage">Manage issues/PRs</option>
+            <option value="write">Commit and push code</option>
+            <option value="maintain">Adjust repo settings</option>
+            <option value="admin">Co-own the repository</option>
+          </select>
+          <div class="role-result" id="roleResult" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section id="tips" class="section" aria-labelledby="tips-title">
+      <div class="container">
+        <h2 id="tips-title">Privacy Tips</h2>
+        <ul class="tips" role="list">
+          <li>Inviting someone to one repository <strong>does not</strong> expose your other private repositories.</li>
+          <li>Use the <strong>least-privilege role</strong> that enables their job.</li>
+          <li>Rotate or remove access when the collaboration ends.</li>
+          <li>Consider organization teams if you routinely add multiple collaborators.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> GitHub Collaborator Guide</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#overview">Top</a></li>
+          <li><a href="GitHub_Invite_Collaborator_Guide.pdf">Download PDF</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
